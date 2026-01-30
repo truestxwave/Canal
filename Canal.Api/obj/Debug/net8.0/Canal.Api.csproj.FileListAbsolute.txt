@@ -7,3 +7,12 @@ H:\Canal\Canal Api\Canal Api\obj\Debug\net8.0\Canal.Api.csproj.CoreCompileInputs
 H:\Canal\Canal Api\Canal Api\obj\Debug\net8.0\Canal.Api.MvcApplicationPartsAssemblyInfo.cs
 H:\Canal\Canal Api\Canal Api\obj\Debug\net8.0\Canal.Api.MvcApplicationPartsAssemblyInfo.cache
 H:\Canal\Canal Api\Canal Api\obj\Debug\net8.0\Canal.Api.sourcelink.json
+H:\Canal\Canal.Api\Canal Api\obj\Debug\net8.0\Canal.Api.csproj.AssemblyReference.cache
+H:\Canal\Canal.Api\Canal Api\obj\Debug\net8.0\rpswa.dswa.cache.json
+H:\Canal\Canal.Api\Canal Api\obj\Debug\net8.0\Canal.Api.GeneratedMSBuildEditorConfig.editorconfig
+H:\Canal\Canal.Api\Canal Api\obj\Debug\net8.0\Canal.Api.AssemblyInfoInputs.cache
+H:\Canal\Canal.Api\Canal Api\obj\Debug\net8.0\Canal.Api.AssemblyInfo.cs
+H:\Canal\Canal.Api\Canal Api\obj\Debug\net8.0\Canal.Api.csproj.CoreCompileInputs.cache
+H:\Canal\Canal.Api\Canal Api\obj\Debug\net8.0\Canal.Api.MvcApplicationPartsAssemblyInfo.cs
+H:\Canal\Canal.Api\Canal Api\obj\Debug\net8.0\Canal.Api.MvcApplicationPartsAssemblyInfo.cache
+H:\Canal\Canal.Api\Canal Api\obj\Debug\net8.0\Canal.Api.sourcelink.json

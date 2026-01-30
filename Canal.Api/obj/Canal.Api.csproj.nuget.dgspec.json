@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Canal\\Canal Api\\Canal Api\\Canal.Api.csproj": {}
+    "H:\\Canal\\Canal.Api\\Canal.Api.csproj": {}
   },
   "projects": {
-    "H:\\Canal\\Canal Api\\Canal Api\\Canal.Api.csproj": {
+    "H:\\Canal\\Canal.Api\\Canal.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Canal\\Canal Api\\Canal Api\\Canal.Api.csproj",
+        "projectUniqueName": "H:\\Canal\\Canal.Api\\Canal.Api.csproj",
         "projectName": "Canal.Api",
-        "projectPath": "H:\\Canal\\Canal Api\\Canal Api\\Canal.Api.csproj",
+        "projectPath": "H:\\Canal\\Canal.Api\\Canal.Api.csproj",
         "packagesPath": "C:\\Users\\Riverynn\\.nuget\\packages\\",
-        "outputPath": "H:\\Canal\\Canal Api\\Canal Api\\obj\\",
+        "outputPath": "H:\\Canal\\Canal.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

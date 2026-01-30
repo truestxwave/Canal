@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Canal.Api",
+    "\\Canal.Api\\Data"
   ],
-  "SelectedNode": "\\Canal.sln",
+  "SelectedNode": "\\Canal.Api\\Data\\CanalDbContext",
   "PreviewInSolutionExplorer": false
 }

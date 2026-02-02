@@ -10,5 +10,6 @@ namespace Canal.Api.Data
         { }
 
         public DbSet<Project> Projects { get; set; } // Make sure this exists
+        public DbSet<Ticket> Tickets { get; set; } // Make sure this exists
     }
 }

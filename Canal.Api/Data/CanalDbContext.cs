@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Canal.Api.Models;
-
+// Data context for Canal application
 namespace Canal.Api.Data
 {
     public class CanalDbContext : DbContext

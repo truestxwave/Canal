@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Canal.Api.Data;
 using Canal.Api.Models;
-
+// Controlls CRUD operations for Project entities
 namespace Canal.Api.Controllers
 {
     [Route("api/[controller]")]

@@ -1,4 +1,6 @@
 namespace Canal.Api.Models
+
+// Represents a project entity in the Canal application
 {
     public class Project
     {

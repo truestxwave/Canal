@@ -8,6 +8,7 @@ type Project = {
 };
 
 type Ticket = {
+  ticketNumber: number;
   projectId: number;
   description: string;
   Requester: string;
@@ -30,6 +31,7 @@ function App() {
   const [ticketDescription, setTicketDescription] = useState("");
   const [ticketRequester, setTicketRequester] = useState("");
   const [creatingTicket, setCreatingTicket] = useState(false);
+  const [ticketNumber, setTicketNumber] = useState(1); // simple auto-increment per session
 
   // Fetch projects on load
   useEffect(() => {
@@ -138,11 +140,12 @@ function App() {
                 if (!ticketRequester || !ticketDescription) return alert("Requester and description required");
                 setCreatingTicket(true);
                 try {
-                  await createTicket(0, selectedProject.id, ticketDescription, ticketRequester, "Open");
+                  await createTicket(ticketNumber, selectedProject.id, ticketDescription, ticketRequester, "Open");
                   const data = await getTickets(selectedProject.id);
                   setTickets(data);
                   setTicketRequester("");
                   setTicketDescription("");
+                  setTicketNumber(prev => prev + 1); // increment ticket number
                 } catch (err) {
                   console.error(err);
                   alert("Failed to create ticket");
@@ -162,8 +165,8 @@ function App() {
           ) : (
             <ul>
               {tickets.map(t => (
-                <li key={t.id} style={{ marginBottom: 8 }}>
-                  <strong>{t.Requester}</strong>: {t.description} - {t.status}
+                <li key={t.ticketNumber} style={{ marginBottom: 8 }}>
+                  <strong>#{t.ticketNumber} {t.Requester}</strong>: {t.description} - {t.status}
                 </li>
               ))}
             </ul>

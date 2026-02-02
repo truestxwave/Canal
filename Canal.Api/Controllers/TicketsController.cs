@@ -16,52 +16,24 @@ namespace Canal.Api.Controllers
             _context = context;
         }
 
-        // GET: api/Tickets
-        [HttpGet]
-        public async Task<IActionResult> GetTickets()
+        // GET: api/tickets/{projectId}
+        [HttpGet("{projectId}")]
+        public async Task<ActionResult<IEnumerable<Ticket>>> GetTickets(int projectId)
         {
-            var tickets = await _context.Tickets.ToListAsync();
+            var tickets = await _context.Tickets
+                                        .Where(t => t.ProjectId == projectId)
+                                        .ToListAsync();
             return Ok(tickets);
         }
 
-        // GET: api/Tickets/{id}
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetTicket(int id)
+        // POST: api/tickets/{projectId}
+        [HttpPost("{projectId}")]
+        public async Task<ActionResult<Ticket>> CreateTicket(int projectId, [FromBody] Ticket ticket)
         {
-            var ticket = await _context.Tickets.FindAsync(id);
-            if (ticket == null) return NotFound();
-            return Ok(ticket);
-        }
-
-        // POST: api/tickets
-        [HttpPost]
-        public async Task<IActionResult> CreateTicket([FromBody] Ticket ticket)
-        {
+            ticket.ProjectId = projectId;
             _context.Tickets.Add(ticket);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetTicket), new { id = ticket.Id }, ticket);
-        }
-
-        // PUT: api/tickets/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTicket(int id, [FromBody] Ticket ticket)
-        {
-            if (id != ticket.Id) return BadRequest();
-            _context.Entry(ticket).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-            return NoContent();
-        }
-
-        // DELETE: api/tickets/{id}
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTicket(int id)
-        {
-            var ticket = await _context.Tickets.FindAsync(id);
-            if (ticket == null) return NotFound();
-            _context.Tickets.Remove(ticket);
-            await _context.SaveChangesAsync();
-            return NoContent();
+            return CreatedAtAction(nameof(GetTickets), new { projectId }, ticket);
         }
     }
 }
-

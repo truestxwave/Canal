@@ -27,7 +27,7 @@ export async function getTickets(projectId: number) {
 
 // Create a new ticket for a specific project
 export async function createTicket(
-  
+  ticketNumber: number,
   projectId: number,
   description: string,
   Requester: string,
@@ -36,7 +36,7 @@ export async function createTicket(
   const res = await fetch(`http://localhost:5056/api/tickets/${projectId}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ Requester, description, status }),
+    body: JSON.stringify({ ticketNumber, Requester, description, status }),
   });
 
   if (!res.ok) throw new Error("Failed to create ticket");

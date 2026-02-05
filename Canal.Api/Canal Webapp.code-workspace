@@ -7,5 +7,7 @@
 			"path": "../Canal.Frontend"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Canal.Frontend"
+	}
 }

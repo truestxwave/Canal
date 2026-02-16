@@ -1,0 +1,9 @@
+H:\Canal\Canal.LoginAPI\AuthApiProject\obj\Debug\net9.0\AuthApiProject.csproj.AssemblyReference.cache
+H:\Canal\Canal.LoginAPI\AuthApiProject\obj\Debug\net9.0\rpswa.dswa.cache.json
+H:\Canal\Canal.LoginAPI\AuthApiProject\obj\Debug\net9.0\AuthApiProject.GeneratedMSBuildEditorConfig.editorconfig
+H:\Canal\Canal.LoginAPI\AuthApiProject\obj\Debug\net9.0\AuthApiProject.AssemblyInfoInputs.cache
+H:\Canal\Canal.LoginAPI\AuthApiProject\obj\Debug\net9.0\AuthApiProject.AssemblyInfo.cs
+H:\Canal\Canal.LoginAPI\AuthApiProject\obj\Debug\net9.0\AuthApiProject.csproj.CoreCompileInputs.cache
+H:\Canal\Canal.LoginAPI\AuthApiProject\obj\Debug\net9.0\AuthApiProject.MvcApplicationPartsAssemblyInfo.cs
+H:\Canal\Canal.LoginAPI\AuthApiProject\obj\Debug\net9.0\AuthApiProject.MvcApplicationPartsAssemblyInfo.cache
+H:\Canal\Canal.LoginAPI\AuthApiProject\obj\Debug\net9.0\AuthApiProject.sourcelink.json

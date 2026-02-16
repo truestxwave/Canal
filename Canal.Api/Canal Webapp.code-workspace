@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../Canal.Frontend"
+		},
+		{
+			"path": "../Canal.LoginAPI"
 		}
 	],
 	"settings": {

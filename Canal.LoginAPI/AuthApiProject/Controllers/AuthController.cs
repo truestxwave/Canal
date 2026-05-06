@@ -7,7 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 
-[ApiController]
+ [ApiController]
 [Route("api/[controller]")]
 public class AuthController : ControllerBase
 {

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "H:\\Canal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\Canal\\Canal.Api\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Canal.Api\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\Canal\\Canal.Api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Canal.Api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\Canal\\Canal.Api\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Canal.Api\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,6 +55,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "H:\\Canal\\Canal.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Canal.Api\\appsettings.Development.json",
+              "ToolTip": "H:\\Canal\\Canal.Api\\appsettings.Development.json",
+              "RelativeToolTip": "Canal.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-02T20:47:05.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "H:\\Canal\\Canal.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Canal.Api\\appsettings.json",
+              "ToolTip": "H:\\Canal\\Canal.Api\\appsettings.json",
+              "RelativeToolTip": "Canal.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-02T20:47:01.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\Canal\\Canal.Api\\Program.cs",
               "RelativeDocumentMoniker": "Canal.Api\\Program.cs",
@@ -59,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Canal.Api.csproj.user",
               "DocumentMoniker": "H:\\Canal\\Canal.Api\\Canal.Api.csproj.user",
               "RelativeDocumentMoniker": "Canal.Api\\Canal.Api.csproj.user",
@@ -67,12 +101,11 @@
               "RelativeToolTip": "Canal.Api\\Canal.Api.csproj.user",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
-              "WhenOpened": "2026-01-30T23:13:45.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-30T23:13:45.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Canal.Api.csproj",
               "DocumentMoniker": "H:\\Canal\\Canal.Api\\Canal.Api.csproj",
               "RelativeDocumentMoniker": "Canal.Api\\Canal.Api.csproj",
@@ -80,12 +113,11 @@
               "RelativeToolTip": "Canal.Api\\Canal.Api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-30T23:13:44.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-30T23:13:44.956Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Canal Api.http",
               "DocumentMoniker": "H:\\Canal\\Canal.Api\\Canal Api.http",
               "RelativeDocumentMoniker": "Canal.Api\\Canal Api.http",
@@ -93,8 +125,7 @@
               "RelativeToolTip": "Canal.Api\\Canal Api.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-01-30T23:13:42.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-30T23:13:42.873Z"
             }
           ]
         }

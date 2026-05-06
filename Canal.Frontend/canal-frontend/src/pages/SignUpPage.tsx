@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AUTH_API } from "../api/ApiConfig";
 
 
 const SignUp: React.FC = () => {
@@ -6,10 +7,33 @@ const SignUp: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Replace this with your API call
-    console.log("Sign Up Data:", { name, email, password });
+    try {
+      const response = await fetch(`${AUTH_API}/api/auth/register`, { 
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, password }),
+      });
+      const message = await response.text();
+      console.log("Response message:", message); // Log the response message for debugging
+
+      if (!response.ok) {
+        throw new Error("Sign up failed");
+      }
+      console.log("Sign up successful:", message); // Log success message for debugging
+      alert("Sign up successful! Please log in with your new credentials.");
+        // Optionally, you can redirect to the login page after successful sign up
+        window.location.href = "/login"
+      
+
+      // Handle successful sign up (e.g., redirect to login page)
+    } catch (error) {
+      console.error("Sign up failed:", error);
+      alert("Sign up failed:, " + "An error has occurred during sign up. Please try again.");
+    }
   };
 
   return (

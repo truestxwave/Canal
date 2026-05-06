@@ -6,8 +6,10 @@ using Canal.LoginAPI.Models;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using System.Reflection.Metadata.Ecma335;
+using Canal.LoginApi.DTOs;
 
- [ApiController]
+[ApiController]
 [Route("api/[controller]")]
 public class AuthController : ControllerBase
 {
@@ -21,14 +23,14 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register(RegisterDto dto)
+    public async Task<IActionResult> Register(RegisterDTO dto)
     {
         if (await _context.Users.AnyAsync(u => u.Email == dto.Email))
             return BadRequest("User already exists");
 
         var user = new User
         {
-            
+            Name = dto.Name,
             Email = dto.Email,
             PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password)
         };
@@ -40,7 +42,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("login")]
-    public async Task<IActionResult> Login(LoginDto dto)
+    public async Task<IActionResult> Login(LoginDTO dto)
     {
         var user = await _context.Users
             .FirstOrDefaultAsync(u => u.Email == dto.Email);

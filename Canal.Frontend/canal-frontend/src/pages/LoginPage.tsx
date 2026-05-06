@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { AUTH_API } from "../api/ApiConfig";
 
 
 interface LoginPageProps {
@@ -11,13 +12,33 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
+
     e.preventDefault();
-    console.log("Logging in", email, password);
+    try {
 
-    // Mark as logged in
-    onLogin();
+      const response = await fetch(`${AUTH_API}/api/auth/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
+      if (!response.ok) {
+        throw new Error("Invalid email or password");
+      } 
+      
+      const data = await response.json();
+      console.log("JWT Token:", data.token); // Log the token for debugging
+      // Store the token in localStorage (or a cookie)
+      localStorage.setItem("token", data.token);
+      onLogin(); // Notify parent component about successful login
+    } catch (error) {
+      console.error("Login failed:", error);
+      alert("Login failed: Invalid email or password");
+      return; // Exit the function if login fails
+    }
     // Navigate to dashboard
     navigate("/dashboard");
   };

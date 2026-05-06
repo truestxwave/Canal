@@ -1,11 +1,15 @@
-
+using System.ComponentModel.DataAnnotations;
 namespace Canal.LoginAPI.Models
 {   
     public class User
     {
-        public int Id { get; set; }
-        public string Username { get; set; }
-        public string Email { get; set; }
-        public string PasswordHash { get; set; }
+        [Key]
+        public int Id { get; set; } 
+        [Required]
+       public string Name { get; set; } = string.Empty;
+        [Required]
+        public string Email { get; set; } = string.Empty;
+        [Required]
+        public string PasswordHash { get; set; } = string.Empty;
     }
 }

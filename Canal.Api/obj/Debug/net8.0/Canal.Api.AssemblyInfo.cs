@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Canal.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa2c2979aea8ba73819d2b939fdcf5535dc52a97")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+002f7119bfdaef1bdcafd694d3481eaf014c3462")]
 [assembly: System.Reflection.AssemblyProductAttribute("Canal.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Canal.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

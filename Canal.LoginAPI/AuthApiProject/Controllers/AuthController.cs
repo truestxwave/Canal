@@ -8,6 +8,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using System.Reflection.Metadata.Ecma335;
 using Canal.LoginApi.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -78,4 +79,23 @@ private string CreateToken(User user)
 
     return new JwtSecurityTokenHandler().WriteToken(token);
 }
+
+[HttpGet("me")]
+[Authorize]
+public async Task<IActionResult> Me()
+{
+    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+    var user = await _context.Users.FindAsync(int.Parse(userId));
+
+    if (user == null)
+        return NotFound();
+
+    return Ok(new
+    {
+        user.Id,
+        user.Name,
+        user.Email
+    });
+}   
 }

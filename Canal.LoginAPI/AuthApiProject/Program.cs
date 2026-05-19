@@ -29,23 +29,43 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddAuthentication();
-builder.Services.AddAuthorization();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(
+                        builder.Configuration["Jwt:Key"] ?? "default_secret_key_12345")
+            ),
+            
+        };
+    }  );
+    builder.Services.AddAuthorization();
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
 
-// 2. BUILD APP
-var app = builder.Build();
 
-// 3. MIDDLEWARE ORDER (IMPORTANT)
-app.UseCors("AllowFrontend");
+    // 2. BUILD APP
+    var app = builder.Build();
 
-app.UseHttpsRedirection();
+    // 3. MIDDLEWARE ORDER (IMPORTANT)
+    app.UseCors("AllowFrontend");
+    app.UseSwagger();
+    app.UseSwaggerUI();
+   
+    app.UseHttpsRedirection();
 
-app.UseAuthentication();
-app.UseAuthorization();
+    app.UseAuthentication();
+    app.UseAuthorization();
 
-app.MapControllers();
+    app.MapControllers();
 
-app.Run();
+    app.Run();
 
 
 

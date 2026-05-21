@@ -49,6 +49,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
 
+    builder.WebHost.ConfigureKestrel(options =>
+    {
+        options.ListenAnyIP(5213); // Listen on port 5213 for HTTP
+    });
+
 
     // 2. BUILD APP
     var app = builder.Build();
@@ -64,6 +69,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     app.UseAuthorization();
 
     app.MapControllers();
+    app.Urls.Add("http://0.0.0.0:5213");
 
     app.Run();
 

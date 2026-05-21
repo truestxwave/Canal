@@ -94,3 +94,4 @@ h:\Canal\Canal.Api\obj\Debug\net8.0\refint\Canal.Api.dll
 h:\Canal\Canal.Api\obj\Debug\net8.0\Canal.Api.pdb
 h:\Canal\Canal.Api\obj\Debug\net8.0\Canal.Api.genruntimeconfig.cache
 h:\Canal\Canal.Api\obj\Debug\net8.0\ref\Canal.Api.dll
+H:\Canal\Canal.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

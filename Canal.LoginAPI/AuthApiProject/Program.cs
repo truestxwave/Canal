@@ -63,13 +63,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     app.UseSwagger();
     app.UseSwaggerUI();
    
-    app.UseHttpsRedirection();
+   
 
     app.UseAuthentication();
     app.UseAuthorization();
 
     app.MapControllers();
-    app.Urls.Add("http://0.0.0.0:5213");
+    
 
     app.Run();
 

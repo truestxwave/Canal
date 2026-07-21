@@ -7,7 +7,8 @@ const getToken = () => localStorage.getItem("token");
 
 
 export async function getCurrentUser() {
-  const res = await fetch(`${MAIN_API}/api/auth/me`, {
+  const res = await fetch(
+    `${MAIN_API}/api/auth/me`, {
     headers: {
       Authorization: `Bearer ${getToken()}`,
     },
@@ -19,9 +20,16 @@ export async function getCurrentUser() {
 }
 
 // -------------------- PROJECTS --------------------
+type CreateProjectRequest = {
+  name: string;
+  description: string;
+  status?: string;
+};
 
 export async function getProjects() {
-  const res = await fetch(`${MAIN_API}/api/projects`, {
+  const res = await fetch
+  (`${MAIN_API}/api/projects`, {
+    method : "GET",
     headers: {
       Authorization: `Bearer ${getToken()}`,
     },
@@ -30,12 +38,11 @@ export async function getProjects() {
   if (!res.ok) throw new Error("Failed to fetch projects");
 
   return res.json();
+
+  
 }
 
-export async function createProject(
-  name: string,
-  description: string
-) {
+export async function createProject(project: CreateProjectRequest) {
   const res = await fetch(`${MAIN_API}/api/projects`, {
     method: "POST",
     headers: {
@@ -43,8 +50,9 @@ export async function createProject(
       Authorization: `Bearer ${getToken()}`,
     },
     body: JSON.stringify({
-      name,
-      description,
+      name: project.name,
+      description: project.description,
+      status: project.status,
     }),
   });
 
@@ -69,16 +77,17 @@ export async function getTickets(projectId: number) {
 
   return res.json();
 }
+type CreateTicketRequest = {
+  ticketNumber: number;
+  projectId: number;
+  description: string;
+  requester: string;
+  status: string;
+};
 
-export async function createTicket(
-  ticketNumber: number,
-  projectId: number,
-  description: string,
-  requester: string,
-  status: string
-) {
+export async function createTicket(ticket: CreateTicketRequest) {
   const res = await fetch(
-    `${MAIN_API}/api/tickets/${projectId}`,
+    `${MAIN_API}/api/tickets/${ticket.projectId}`,
     {
       method: "POST",
       headers: {
@@ -86,11 +95,11 @@ export async function createTicket(
         Authorization: `Bearer ${getToken()}`,
       },
       body: JSON.stringify({
-        ticketNumber,
-        requester,
-        description,
-        status,
-      }),
+        ticketNumber: ticket.ticketNumber,
+        description: ticket.description,
+        requester: ticket.requester,
+        status: ticket.status,
+    }),
     }
   );
 
@@ -98,3 +107,9 @@ export async function createTicket(
 
   return res.json();
 }
+
+ 
+ 
+ 
+
+  

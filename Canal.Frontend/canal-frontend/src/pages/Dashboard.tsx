@@ -5,6 +5,8 @@ import {
   getTickets,
 } from "../api/client";
 
+import { Link } from "react-router-dom";
+
 type Project = {
   id: number;
   name: string;
@@ -162,6 +164,22 @@ const Dashboard: React.FC = () => {
           ))}
         </div>
       )}
+
+
+      {/* Create Ticket Button */}
+
+      <div className="d-flex justify-content-between align-items-center mb-3">
+  <h5 className="mb-0">
+    Tickets for {selectedProject?.name}
+  </h5>
+
+  <Link
+    to="/create-ticket"
+    className="btn btn-success"
+  >
+    + Create Ticket
+  </Link>
+</div>
 
       {/* Tickets */}
       {selectedProject && (
